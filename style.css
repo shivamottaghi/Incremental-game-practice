@@ -5,7 +5,9 @@
 }
 
 #counter{
-    border: 1px solid #886b46;
+    border: 3px solid #2d160d;
+    background-color: #9c7d51;
+    color: white;
     border-radius: 20px;
     padding: 10px;
     margin: 10px;
