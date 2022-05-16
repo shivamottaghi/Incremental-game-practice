@@ -14,7 +14,7 @@
     align-content: center;
 }
 
-#cookieMultiplier{
+#cookieMultiplier , #cookieAutoClicker{
     background-color: #582c18;
     display: block;
 }
