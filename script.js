@@ -11,9 +11,9 @@
     let autoCostTag = document.getElementById('autoClickCost');
     let autoCountTag = document.getElementById('autoCount');
     let mult = 1 ;
-    let multCost = 25;
+    let multCost = 15;
     let auto = 0;
-    let autoCost = 150;
+    let autoCost = 100;
     //event listener for cookie
     cookie.addEventListener('click', () =>{
        counter += mult;
@@ -49,7 +49,6 @@
             window.alert('OOPS!! You don\'t have enough Cookies!');
         }
     })
-
     setInterval(()=>{
         counter+= auto;
         countertag.innerHTML = counter;
