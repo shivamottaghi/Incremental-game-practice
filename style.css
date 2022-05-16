@@ -16,4 +16,18 @@
 
 #cookieMultiplier{
     background-color: #582c18;
+    display: block;
+}
+
+body{
+    background-image: url("images/cookie black.png");
+    background-size: 100px;
+    background-color: #ffd4a8;
+}
+
+li{
+    background-color: #886a47;
+    color: white;
+    padding: 5px;
+    align-content: center;
 }
