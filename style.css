@@ -1,0 +1,13 @@
+#cookie{
+    height: 250px;
+    alignment: center;
+    margin: 10px;
+}
+
+#counter{
+    border: 1px solid #886b46;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    align-content: center;
+}
