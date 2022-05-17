@@ -8,22 +8,45 @@
 <body>
 <div class="container-fluid">
     <div class="row align-items-center justify-content-center m-1">
-        <div class="col col-md-6">
-            <h1>Click on the cookie!</h1>
+        <div class="col col-md-4">
+            <h3>Click on the cookie!</h3>
             <img src="images/cookie.png" alt="cookie" id="cookie">
+        </div>
+        <div class="col col-md-2">
             <span id="counter">counter: <span id="countNum">0</span></span>
         </div>
         <div class="col col-md-6">
             <ul class="list-unstyled align-self-center">
-                <li>
+                <li class="bottom-border">
                     <label for="cookieMultiplier" class="btnli" id="cookieMultLabel">Click Multiplier, Costs <em id="multCost">15</em> cookies!</label>
-                    <button type="button" class="btn btn-dark btn-lg" id="cookieMultiplier">Purchase</button>
-                    <p>At this moment each click gets you <em id="multCount">1 cookie</em>.</p>
+<!--                    <button type="button" class="btn btn-dark btn-lg" id="cookieMultiplier">Purchase</button>-->
+                    <img src="images/tap.png" alt="tap" height="70" id="cookieMultiplier">
+                    <p>
+                        Buy this, so you can get more cookies per click!
+                    </p>
                 </li>
                 <li>
-                    <label for="cookieAutoClicker" id="cookieAutoClickLabel">Auto Clicker, Costs <em id="autoClickCost">100</em> cookies!</label>
-                    <button type="button" class="btn btn-dark btn-lg" id="cookieAutoClicker">Purchase</button>
-                    <p>At this moment you get <em id="autoCount">0 cookie</em> per second.</p>
+                    <label for="cookieAutoClicker" id="cookieAutoClickLabel">Hire a chef, Costs <em id="autoClickCost">100</em> cookies!</label>
+<!--                    <button type="button" class="btn btn-dark btn-lg" id="cookieAutoClicker">Purchase</button>-->
+                    <img src="images/chef.png" alt="chef" height="70" id="cookieAutoClicker">
+                    <p>
+                        Each chef cooks 1 cookie per second!
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-md-6">
+            <ul class="list-unstyled align-self-center">
+                <li class="bottom-border">
+                    At this moment:
+                </li>
+                <li>
+                    <p>Each click gets you <em id="multCount">1 cookie</em>.</p>
+                </li>
+                <li>
+                    <p>You get <em id="autoCount">0 cookie</em> per second.</p>
                 </li>
             </ul>
         </div>

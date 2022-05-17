@@ -1,9 +1,10 @@
 #cookie{
     height: 250px;
     alignment: center;
-    margin: 10px;
 }
-
+/*#cookie:hover {
+    height: 230px;
+}*/
 #counter{
     border: 3px solid #2d160d;
     background-color: #9c7d51;
@@ -15,8 +16,8 @@
 }
 
 #cookieMultiplier , #cookieAutoClicker{
-    background-color: #582c18;
     display: block;
+    cursor: pointer;
 }
 
 body{
@@ -31,10 +32,17 @@ li{
     padding: 5px;
     align-content: center;
 }
+ul{
+    border: 3px solid #2D2613;
+}
 
-h1{
+h3{
     background-color: #ecb15f;
     width: fit-content;
     padding: 10px;
     align-content: center;
+}
+
+.bottom-border{
+    border-bottom:3px solid #2D2613;
 }
