@@ -28,19 +28,53 @@
     let oven = 0;
     let ovenCost = 550;
     oventCostTag.innerHTML = ovenCost;
-
+    let chance = 0.2;
     let cursor = 1;
     let chef = 0;
     let myOven = 0;
+    let check = true;
     //-------------my variables End--------------
 
 
     //-------------My Functions------------------
     setInterval(()=>{
+        let random = Math.random();
+        if (random < chance && check){
+            bonus()
+        }
+
+    }, 5000)
+    setInterval(()=>{
+        //update the counter
         counter+= auto + oven;
         tagUpdate(countertag , counter)
     }, 1000)
 
+    const bonus = () => {
+        check = false;
+        let timeLeft = 8
+        let bonusTag = document.getElementById('heading');
+        let origintext = bonusTag.innerText;
+        let originbgColor = bonusTag.style.backgroundColor;
+        bonusTag.style.backgroundColor = '#e71d36';
+        let bonustext = `IT\'S BONUS TIME!!!! NOW YOU HAVE 2X CLICKS!!! TIME LEFT: ${timeLeft}`;
+        bonusTag.innerHTML = bonustext;
+        mult *= 2;
+        let bonusInterval = setInterval(()=>{
+            if(timeLeft==0){
+                clearInterval(bonusInterval);
+                mult = mult/2;
+                tagUpdate(bonusTag, origintext)
+                bonusTag.style.backgroundColor = originbgColor;
+                check = true;
+            }else {
+                timeLeft --;
+                bonustext = `IT\'S BONUS TIME!!!! NOW YOU HAVE 2X CLICKS!!! TIME LEFT: ${timeLeft}`;
+                bonusTag.innerHTML = bonustext;
+            }
+        }, 1000)
+
+    }
 
     const tagUpdate = ( tagname, text) => {
       tagname.innerHTML = text;
