@@ -1,6 +1,7 @@
 #cookie{
     height: 250px;
     alignment: center;
+    cursor: pointer;
 }
 /*#cookie:hover {
     height: 230px;
@@ -15,7 +16,7 @@
     align-content: center;
 }
 
-#cookieMultiplier , #cookieAutoClicker{
+#cookieMultiplier , #cookieAutoClicker , #oven{
     display: block;
     cursor: pointer;
 }
