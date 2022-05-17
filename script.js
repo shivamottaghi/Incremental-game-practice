@@ -28,7 +28,7 @@
     let oven = 0;
     let ovenCost = 550;
     oventCostTag.innerHTML = ovenCost;
-    let chance = 0.2;
+    let chance = 0.1;
     let cursor = 1;
     let chef = 0;
     let myOven = 0;
@@ -43,7 +43,7 @@
             bonus()
         }
 
-    }, 5000)
+    }, 6000)
     setInterval(()=>{
         //update the counter
         counter+= auto + oven;
