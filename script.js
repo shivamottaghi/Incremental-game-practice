@@ -17,6 +17,11 @@
     let howManyCursor = document.getElementById('cursor');
     let howManyChef = document.getElementById('chef');
     let howManyOven = document.getElementById('howmanyoven');
+    let bonusBtn = document.getElementById('bonus');
+    let bonusCostTag = document.getElementById('bonusCost');
+    let scoreToBuyBonusTag = document.getElementById('scoreToBuyBonus');
+    let bonusIncreaseRateTag = document.getElementById('bonusIncreaseRate');
+    let timerTag = document.getElementById('timer');
     // XxXxX  tags End XxXxX
     let counter = 0;
     let mult = 1 ;
@@ -28,15 +33,23 @@
     let oven = 0;
     let ovenCost = 550;
     oventCostTag.innerHTML = ovenCost;
-    let chance = 0.1;
+    // let chance = 0.1;
     let cursor = 1;
     let chef = 0;
     let myOven = 0;
-    let check = true;
+
+    let check = false;
+    let bonusCost = 1400;
+    let bonusIncreaseRate = 0.2;
+    let scoreToBuyBonus = 1500;
+    let bonusTimerCounter = 5;
+    let bonusIntervalCalled = false;
     //-------------my variables End--------------
 
 
     //-------------My Functions------------------
+    /*
+    //Bonus By Chance function. RIP
     setInterval(()=>{
         let random = Math.random();
         if (random < chance && check){
@@ -44,12 +57,6 @@
         }
 
     }, 6000)
-    setInterval(()=>{
-        //update the counter
-        counter+= auto + oven;
-        tagUpdate(countertag , counter)
-    }, 1000)
-
     const bonus = () => {
         check = false;
         let timeLeft = 8
@@ -75,6 +82,14 @@
         }, 1000)
 
     }
+    */
+    setInterval(()=>{
+        //update the counter
+        counter+= auto + oven;
+        tagUpdate(countertag , counter)
+    }, 1000)
+
+
 
     const tagUpdate = ( tagname, text) => {
       tagname.innerHTML = text;
@@ -83,9 +98,31 @@
 
     //event listener for cookie
     cookie.addEventListener('click', () =>{
-       counter += mult;
-        tagUpdate(countertag , counter)
+        if (check == false){
+            counter += mult;
+            tagUpdate(countertag , counter)
+        } else {
+            counter += Math.floor(counter * bonusIncreaseRate);
+            if (bonusIntervalCalled == true){
+                bonusIntervalCalled = false;
+                bonusFunc();
+            }
+        }
+
     })
+    function bonusFunc() {
+        timerTag.innerText = `Time left : ${bonusTimerCounter}`;
+        const bonusTimer = setInterval(()=>{
+            if (bonusTimerCounter == 0){
+                clearInterval(bonusTimer)
+                check = false;
+                timerTag.innerText = '';
+            }else {
+                bonusTimerCounter --;
+                timerTag.innerText = `Time left : ${bonusTimerCounter}`;
+            }
+        },1000)
+    }
 
 
     //event listener for click multiplier
@@ -142,6 +179,16 @@
             tagUpdate(oventCostTag , ovenCost)
             tagUpdate(howManyOven, `X ${myOven}`)
         } else {
+            window.alert('OOPS!! You don\'t have enough Cookies!');
+        }
+    })
+
+    bonusBtn.addEventListener('click', () =>{
+        if (counter >= scoreToBuyBonus){
+            counter -= bonusCost;
+            check = true;
+            bonusIntervalCalled = true;
+        }else {
             window.alert('OOPS!! You don\'t have enough Cookies!');
         }
     })

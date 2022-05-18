@@ -40,12 +40,21 @@
                         Each chef cooks 1 cookie per second!
                     </p>
                 </li>
-                <li>
+                <li class="bottom-border">
                     <label for="oven" id="ovenlabel">Buy an Auto Bake Oven , Costs <em id="ovenCost">550</em> cookies!</label>
                     <img src="images/oven.png" alt="chef" height="70" id="oven"> <span id="howmanyoven">X 0</span>
                     <p>
                         Each oven cooks 4 cookies per second!
                     </p>
+                </li>
+                <li>
+                    <label for="bonus" id="bonusLabel">Buy this item to get bonus for 30s, Costs <em id="bonusCost">1400</em> cookies!</label>
+                    <img src="images/bonus.png" alt="bonus" height="70" id="bonus">
+                    <p>
+                        You can buy this item if your score is higher than <span id="scoreToBuyBonus">1500</span>. For 5s
+                        each click gets you +<span id="bonusIncreaseRate">20%</span> of your cookie counter.
+                    </p>
+                    <p id="timer"></p>
                 </li>
             </ul>
         </div>

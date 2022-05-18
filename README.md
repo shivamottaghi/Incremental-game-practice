@@ -19,7 +19,7 @@
 ---
 
 ### Improvement check list:
-- [ ] change the bonus function
+- [x] change the bonus function
 - [x] cookie image margins
 - [x] change the position of the current state explanation box
 - [ ] correct the shop price increasing ratio

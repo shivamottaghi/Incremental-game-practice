@@ -15,7 +15,7 @@
     align-content: center;
 }
 
-#cookieMultiplier , #cookieAutoClicker , #oven{
+#cookieMultiplier , #cookieAutoClicker , #oven , #bonus{
     display: block;
     cursor: pointer;
 }
