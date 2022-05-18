@@ -15,12 +15,11 @@
     - At the beginning of the game you get 1 cookie per click.
 - By buying the *Click Multiplier* you get more cookies per click.
 - By Hiring a chef you get automatic cookies.
-- By buying a auto bake oven you get even more cookies per second!
-- There is a 10% chance of getting a bonus time per minute. during that time you get X2 cookies per
-    click. Including your click multiplier.
+- By buying an auto bake oven you get even more cookies per second!
 ---
 
 ### Improvement check list:
 - [ ] change the bonus function
-- [ ] cookie image margins
-- [ ] change the position of the second ul 
+- [x] cookie image margins
+- [x] change the position of the current state explanation box
+- [ ] correct the shop price increasing ratio
