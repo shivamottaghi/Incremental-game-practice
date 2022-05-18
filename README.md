@@ -19,7 +19,12 @@
 ---
 
 ### Improvement check list:
-- [x] change the bonus function
+- [x] change the whole bonus procedure
+  - [ ] make it run faster
 - [x] cookie image margins
-- [x] change the position of the current state explanation box
+- [x] change the position of the "current state explanation" box
 - [ ] correct the shop price increasing ratio
+  - [x] click multiplier: the amount users can buy increases per 10 purchase 
+  (for first 10 multipliers, each purchase adds 1 extra click, for 10 to 20 , each purchase adds 2 extra click and... )
+    - [ ] display how many clicks they're buying
+- [ ] increase bonus cost per purchase
