@@ -1,11 +1,9 @@
 #cookie{
-    height: 250px;
+    height: 300px;
     alignment: center;
     cursor: pointer;
 }
-/*#cookie:hover {
-    height: 230px;
-}*/
+
 #counter{
     border: 3px solid #2d160d;
     background-color: #9c7d51;

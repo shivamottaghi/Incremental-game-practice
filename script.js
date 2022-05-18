@@ -91,10 +91,11 @@
     //event listener for click multiplier
     clickMultBtn.addEventListener('click' , ()=>{
         if (counter>= multCost){
-            mult++;
+            cursor++;
+            mult= mult + Math.ceil(cursor/10);
+            console.log(Math.ceil(cursor/10));
             counter = counter - multCost;
             multCost += Math.floor(multCost/5);
-            cursor++;
             tagUpdate(countertag , counter)
             tagUpdate(multCountTag, `${mult} cookies`)
             tagUpdate(multCostTag, multCost)
